@@ -31,6 +31,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
