@@ -1,11 +1,53 @@
 ﻿@page
+@using SE1611_Group1_A3.Models
 @model SE1611_Group1_A3.Shopping.IndexModel
 @{
-
+    var genreList = ViewData["genreList"] as IEnumerable<Genre>;
+    var albumPaging = ViewData["Product"] as List<Album>;
+    var context = new MusicStoreContext();
+    var prevDisabled = Model.IndexPaging == 1 ? "disabled" : "";
+    var nextDisabled = Model.IndexPaging == Model.TotalPage ? "disabled" : "";
 }
-@{
-    var userName = HttpContext.Session.GetString("Username");
-    var role = HttpContext.Session.GetInt32("Role");
-}
-<p>Hello @userName</p>
-<p>Role @role</p>
+<h1>Shopping</h1>
+<form>
+    Genre Name: <select asp-for="GenreId" asp-items="Model.Genres">
+        <option value=0>All</option>
+        @foreach (Genre item in genreList)
+        {
+            <option value=@item.GenreId>@item.Name</option>
+        }
+    </select>
+    Find by name: <input asp-for="SearchString" type="text" />
+    <input type="submit" class="btn btn-primary" value="Search" />
+    | <a href="./shopping?GenreId=0&SearchString=&IndexPaging=1">Back to full list</a>
+</form>
+<div class="container" style="margin-top: 30px">
+    <div class="row">
+        @foreach (var item in albumPaging)
+        {
+            <div class="col-sm">
+                <div class="col">
+                    <img src="@item.AlbumUrl" alt="@item.Title" style="max-width: 150px"/>
+                    <a style="color:blue">$@item.Price</a>
+                </div>
+                <a style="color:blue">@item.Title</a>
+                <div class="col">
+                    <a>Artist: @context.Artists.FirstOrDefault(x => x.ArtistId == item.ArtistId).Name</a>
+                </div>
+                <div class="col">
+                    <a>Genre: @item.Genre.Name</a>
+                </div>
+                <div class="col">
+                    <form method="post">
+                        <input type="submit" asp-page-handler="AddToCart" value="AddToCart" asp-route-id="@item.AlbumId" class="btn btn-primary" />
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div style="margin-top: 200px">
+    <a href="/Shopping/index?GenreId=@Model.GenreId&SearchString=@Model.SearchString&IndexPaging=@(Model.IndexPaging-1)" class="btn btn-primary @prevDisabled">Previous</a>
+    <a href="/Shopping/index?GenreId=@Model.GenreId&SearchString=@Model.SearchString&IndexPaging=@(Model.IndexPaging+1)" class="btn btn-primary @nextDisabled">Next</a>
+    Page: @Model.IndexPaging/@Model.TotalPage
+</div>
