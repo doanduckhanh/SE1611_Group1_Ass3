@@ -1,0 +1,11 @@
+﻿@page
+@model SE1611_Group1_A3.Shopping.IndexModel
+@{
+
+}
+@{
+    var userName = HttpContext.Session.GetString("Username");
+    var role = HttpContext.Session.GetInt32("Role");
+}
+<p>Hello @userName</p>
+<p>Role @role</p>
