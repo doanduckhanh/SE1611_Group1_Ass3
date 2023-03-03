@@ -41,7 +41,7 @@
                     </ul>
                     @if (ViewData["Username"] != null)
                     {
-                        <a class="text-white text-decoration-none" asp-page="/Shopping/Logout">Logout_(@ViewData["Username"])</a>
+                        <a class="text-white text-decoration-none" asp-page-handler="Logout" asp-page="/Shopping/Logout">Logout_(@ViewData["Username"])</a>
                     }
                     else
                     {
