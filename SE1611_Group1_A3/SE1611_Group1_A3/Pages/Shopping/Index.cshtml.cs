@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using SE1611_Group1_A3.Models;
 using SE1611_Group1_A3.Services;
 
@@ -47,10 +48,60 @@ namespace SE1611_Group1_A3.Shopping
             ViewData["genreList"] = context.Genres.Distinct().ToList();
             ViewData["Product"] = PaginatedList<Album>.Create(albums.AsQueryable<Album>(), indexPaging, 3);
         }
-        /*public IActionResult OnPostAddToCart()
+        public IActionResult OnPostAddToCart(int id)
         {
-            shopping.AddToCart(context.Albums.FirstOrDefault(x => x.AlbumId == Id));
-            return Redirect($"./shopping/index?genreId={GenreId}&searchString={SearchString}&indexPaging={IndexPaging}");
-        }*/
+            var cartId = GetCartId();
+            AddToCart(id,cartId);
+            HttpContext.Session.SetInt32("Count", new CartModel(context).GetCount());
+            return RedirectToPage("/Shopping/Cart");
+        }
+
+ 
+        public static string GetCartId()
+        {
+            if (string.IsNullOrEmpty(Settings.CartId))
+            {
+                if (!string.IsNullOrEmpty(Settings.UserName))
+                {
+                    Settings.CartId = Settings.UserName;
+                }
+
+                else
+                {
+                    Guid tempCartId = Guid.NewGuid();
+                    Settings.CartId = tempCartId.ToString();
+                }
+            }
+            return Settings.CartId;
+        }
+
+        public void AddToCart(int albumId, String ShoppingCartId)
+        {
+            // Get the matching cart and album instances
+            var cartItem = context.Carts.SingleOrDefault(
+                c => c.CartId == ShoppingCartId
+                && c.AlbumId == albumId);
+
+            if (cartItem == null)
+            {
+                // Create a new cart item if no cart item exists
+                cartItem = new Cart
+                {
+                    AlbumId = albumId,
+                    CartId = ShoppingCartId,
+                    Count = 1,
+                    DateCreated = DateTime.Now
+                };
+
+                context.Carts.Add(cartItem);
+            }
+            else
+            {
+                // If the item does exist in the cart, then add one to the quantity
+                cartItem.Count++;
+            }
+            // Save changes
+            context.SaveChanges();
+        }
     }
 }
