@@ -28,8 +28,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-white-50" asp-area="" asp-page="/Shopping/Index">Shopping</a>
                         </li>
+                        @{
+                            var count = @Context.Items["Count"] ?? 0;
+                        }
                         <li class="nav-item">
-                            <a class="nav-link text-white-50" asp-area="" asp-page="/Cart">Cart</a>
+                            <a class="nav-link text-white-50" asp-page="/Shopping/Cart">Cart (@count)</a>
                         </li>
                         @if ((ViewData["Role"] as int?) == 1)
                         {
@@ -37,7 +40,6 @@
                                 <a class="nav-link text-white-50" asp-area="" asp-page="/Album">Album</a>
                             </li>
                         }
-
                     </ul>
                     @if (ViewData["Username"] != null)
                     {

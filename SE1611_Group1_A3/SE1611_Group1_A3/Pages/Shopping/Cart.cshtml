@@ -1,0 +1,57 @@
+﻿@page
+@model SE1611_Group1_A3.Shopping.CartModel
+@{
+    ViewData["Title"] = "Cart";
+    var btnDisabled = ViewData["Username"] == null ? "disabled" : "";
+}
+<h1>@ViewData["Title"]</h1>
+<hr />
+<button type="button" class="btn btn-primary" @btnDisabled>Check out</button>
+<hr />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart[0].Album)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart[0].Album.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart[0].Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cart[0].DateCreated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Cart)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td>
+                   
+                    @Convert.ToDateTime(item.DateCreated).ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    <form asp-page-handler="removefromcart" asp-route-id="@item.RecordId" method="post">
+                        <button class="btn btn-danger">Remove from Cart</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="5" style="text-align: center; font-weight: bold;"> <p class="font-weight-bold">Total: @Model.total </p></td>          
+        </tr>
+    </tbody>
+</table>
