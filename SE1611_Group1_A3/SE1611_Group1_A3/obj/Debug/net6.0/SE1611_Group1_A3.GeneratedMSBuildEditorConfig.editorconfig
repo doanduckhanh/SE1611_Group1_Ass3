@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Cart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +30,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/_ViewImports.cshtml]

@@ -127,3 +127,14 @@ E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\o
 E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\obj\Debug\net6.0\SE1611_Group1_A3.pdb
 E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\obj\Debug\net6.0\SE1611_Group1_A3.genruntimeconfig.cache
 E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\obj\Debug\net6.0\ref\SE1611_Group1_A3.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\System.Text.Json.dll
+E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

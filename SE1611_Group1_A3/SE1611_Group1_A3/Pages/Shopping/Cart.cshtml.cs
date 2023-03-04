@@ -2,12 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SE1611_Group1_A3.Models;
+using SE1611_Group1_A3.Services;
 
-namespace SE1611_Group1_A3.Pages
+namespace SE1611_Group1_A3.Shopping
 {
     public class CartModel : PageModel
     {
-        private readonly SE1611_Group1_A3.Models.MusicStoreContext _context;
+        private readonly MusicStoreContext _context;
         public decimal total { get; set; }
 
         public CartModel(MusicStoreContext context)
@@ -17,13 +18,17 @@ namespace SE1611_Group1_A3.Pages
         public IList<Cart> Cart { get; set; } = default!;
         public async Task OnGetAsync()
         {
+            ViewData["Role"] = HttpContext.Session.GetInt32("Role");
+            ViewData["Username"] = HttpContext.Session.GetString("Username");
+
             if (_context.Carts != null)
             {
                 Cart = await _context.Carts
-                .Where(x => x.CartId.Equals("user"))
+                .Where(x => x.CartId.Equals(Settings.CartId))
                 .Include(a => a.Album).ToListAsync();
             }
-            this.total = GetTotal();
+            total = GetTotal();
+            HttpContext.Session.SetInt32("Count", GetCount());
         }
         public decimal GetTotal()
         {
@@ -31,14 +36,14 @@ namespace SE1611_Group1_A3.Pages
             // the current price for each of those albums in the cart
             // sum all album price totals to get the cart total
             decimal? total = (from cartItems in _context.Carts
-                              where cartItems.CartId == "user"
-                              select (int?)cartItems.Count * cartItems.Album.Price).Sum();
+                              where cartItems.CartId == Settings.CartId
+                              select cartItems.Count * cartItems.Album.Price).Sum();
             return total ?? 0;
         }
         public async Task<IActionResult> OnPostRemoveFromCart(int id)
-        {           
+        {
             var cartItem = _context.Carts.SingleOrDefault(
-                c => c.CartId ==  "user"  //Settings.Default["CartId"].ToString()
+                c => c.CartId == Settings.CartId
                 && c.RecordId == id);
 
             int itemCount = 0;
@@ -58,9 +63,19 @@ namespace SE1611_Group1_A3.Pages
 
             }
 
+            HttpContext.Session.SetInt32("Count", GetCount());
 
+            return RedirectToPage("/Shopping/Cart");
+        }
+        public int GetCount()
+        {
+            // Get the count of each item in the cart and sum them up
+            int? count = (from cartItems in _context.Carts
+                          where cartItems.CartId == Settings.CartId
+                          select (int?)cartItems.Count).Count();
+            // Return 0 if all entries are null
+            return count ?? 0;
 
-            return RedirectToPage("/Cart");
         }
     }
 }

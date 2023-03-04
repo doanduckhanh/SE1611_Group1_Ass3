@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\Spring_2023\\PRN221\\as3\\SE1611_Group1_Ass3\\SE1611_Group1_A3\\SE1611_Group1_A3\\wwwroot\\images\\placeholder.gif",
+      "PackagePath": "staticwebassets\\images\\placeholder.gif"
+    },
+    {
       "Id": "E:\\Spring_2023\\PRN221\\as3\\SE1611_Group1_Ass3\\SE1611_Group1_A3\\SE1611_Group1_A3\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
