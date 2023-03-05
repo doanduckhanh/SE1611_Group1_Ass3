@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SE1611_Group1_A3.Models;
 using SE1611_Group1_A3.Services;
+using System.Numerics;
 using System.Text.Json;
 
 namespace SE1611_Group1_A3.Pages.Shopping
@@ -60,7 +61,8 @@ namespace SE1611_Group1_A3.Pages.Shopping
         }
         public int CreateOrder(Order order, List<OrderDetailDTO> orderDetailDTOs)
         {
-            decimal orderTotal = 0;
+            
+            decimal orderTotal = decimal.Parse(HttpContext.Session.GetString("Total"));
             // Set the order's total to the orderTotal count
             order.Total = orderTotal;
             // Save the order
