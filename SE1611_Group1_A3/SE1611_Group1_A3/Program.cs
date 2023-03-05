@@ -1,3 +1,4 @@
+using SE1611_Group1_A3.FileUploadService;
 using SE1611_Group1_A3.Middleware;
 using SE1611_Group1_A3.Models;
 
@@ -5,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IFileUploadService, LocalFileUploadService>();
 builder.Services.AddDbContext<MusicStoreContext>();
 builder.Services.AddSession();
 
