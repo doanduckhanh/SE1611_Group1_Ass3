@@ -29,7 +29,8 @@ namespace SE1611_Group1_A3.Pages.Albums
             }
 
             var album = await _context.Albums.FirstOrDefaultAsync(m => m.AlbumId == id);
-
+            var artis = await _context.Artists.ToListAsync();
+            var genre = await _context.Genres.ToListAsync();
             if (album == null)
             {
                 return NotFound();
