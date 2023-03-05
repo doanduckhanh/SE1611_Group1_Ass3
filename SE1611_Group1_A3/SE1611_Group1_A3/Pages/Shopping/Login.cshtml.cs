@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SE1611_Group1_A3.Models;
@@ -7,7 +8,8 @@ using System.ComponentModel.DataAnnotations;
 namespace SE1611_Group1_A3.Shopping
 {
     public class LoginModel : PageModel
-    {
+    {   
+
         MusicStoreContext _context = new MusicStoreContext();
         [BindProperty]
         [Required]
@@ -28,7 +30,7 @@ namespace SE1611_Group1_A3.Shopping
 
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
 
             var user = _context.Users.FirstOrDefault(u => u.UserName == Username && u.Password == Password);
@@ -41,6 +43,8 @@ namespace SE1611_Group1_A3.Shopping
                     HttpContext.Session.SetString("Username", user.UserName);
                     HttpContext.Session.SetInt32("UserId", user.Id);
                     ViewData["Role"] = user.Role;
+
+
 
                     //-----------------------------
                     Settings.UserName = HttpContext.Session.GetString("Username");

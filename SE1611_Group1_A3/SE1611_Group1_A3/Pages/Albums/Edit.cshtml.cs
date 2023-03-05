@@ -29,6 +29,13 @@ namespace SE1611_Group1_A3.Pages.Albums
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
+            if (HttpContext.Session.GetInt32("UserId") == null)
+            {
+                Response.Redirect("/Shopping/Login");
+            }
+            ViewData["Role"] = HttpContext.Session.GetInt32("Role");
+            ViewData["Username"] = HttpContext.Session.GetString("Username");
+
             if (id == null || _context.Albums == null)
             {
                 return NotFound();
@@ -50,11 +57,7 @@ namespace SE1611_Group1_A3.Pages.Albums
         public async Task<IActionResult> OnPostAsync(Album album, IFormFile file)
         {
             _context.Attach(album).State = EntityState.Modified;
-            if (file == null)
-            {
-                return RedirectToPage("./Create");
-            }
-            else
+            if (file != null)
             {
                 filePath = await fileUploadService.UploadFileAsync(file);
                 album.AlbumUrl = filePath.Substring(filePath.IndexOf(@"\images")).Replace(@"\", "/");
