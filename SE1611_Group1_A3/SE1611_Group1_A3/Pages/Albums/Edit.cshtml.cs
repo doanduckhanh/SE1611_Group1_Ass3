@@ -42,22 +42,19 @@ namespace SE1611_Group1_A3.Pages.Albums
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(Album album)
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
 
-            _context.Attach(Album).State = EntityState.Modified;
+            _context.Attach(album).State = EntityState.Modified;
 
             try
             {
+                _context.Albums.Update(album);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!AlbumExists(Album.AlbumId))
+                if (!AlbumExists(album.AlbumId))
                 {
                     return NotFound();
                 }
