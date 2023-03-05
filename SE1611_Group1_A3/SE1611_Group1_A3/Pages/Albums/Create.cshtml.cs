@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Build.Framework;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using SE1611_Group1_A3.FileUploadService;
 using SE1611_Group1_A3.Models;
 
@@ -30,6 +24,9 @@ namespace SE1611_Group1_A3.Pages.Albums
         {
         ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name");
         ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name");
+            ViewData["Role"] = HttpContext.Session.GetInt32("Role");
+            ViewData["Username"] = HttpContext.Session.GetString("Username");
+
             return Page();
         }
 
