@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SE1611_Group1_A3.Models;
 using SE1611_Group1_A3.Services;
+using System.Text.Json;
 
 namespace SE1611_Group1_A3.Shopping
 {
@@ -28,7 +29,7 @@ namespace SE1611_Group1_A3.Shopping
                 .Include(a => a.Album).ToListAsync();
             }
             total = GetTotal();
-            HttpContext.Session.SetInt32("Count", GetCount());
+            HttpContext.Session.SetInt32("Count", GetCount());          
         }
         public decimal GetTotal()
         {
@@ -66,6 +67,23 @@ namespace SE1611_Group1_A3.Shopping
             HttpContext.Session.SetInt32("Count", GetCount());
 
             return RedirectToPage("/Shopping/Cart");
+        }
+        public async Task<IActionResult> OnPostCheckOut()
+        {
+            total = GetTotal();
+            HttpContext.Session.SetString("Total", total.ToString());
+            List<Cart> carts = _context.Carts.Where(c => c.CartId == Settings.CartId).ToList();
+            List<OrderDetailDTO> orderDetailDTOs = new List<OrderDetailDTO>();
+            foreach(Cart cart in carts)
+            {
+                OrderDetailDTO orderDetailDTO = new OrderDetailDTO();
+                orderDetailDTO.AlbumId = cart.AlbumId;
+                orderDetailDTO.Quantity = cart.Count;
+                orderDetailDTO.UnitPrice = Decimal.Parse("8.99");
+                orderDetailDTOs.Add(orderDetailDTO);
+            }
+            HttpContext.Session.SetString("OrderDetailList", JsonSerializer.Serialize(orderDetailDTOs));
+            return RedirectToPage("/Shopping/Checkout");
         }
         public int GetCount()
         {
