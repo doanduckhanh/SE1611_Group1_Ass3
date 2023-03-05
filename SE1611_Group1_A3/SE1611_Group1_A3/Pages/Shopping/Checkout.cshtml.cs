@@ -39,21 +39,19 @@ namespace SE1611_Group1_A3.Pages.Shopping
         }
         public async Task<IActionResult> OnPostSave()
         {
-            int id = (int)HttpContext.Session.GetInt32("UserId");
-            User user = context.Users.FirstOrDefault(x => x.Id == id);
             List<OrderDetailDTO> orderDetailDTOs = JsonSerializer.Deserialize<List<OrderDetailDTO>>(HttpContext.Session.GetString("OrderDetailList"));
             Order order = new Order();
             order.OrderDate = DateTime.Now;
             order.PromoCode = null;
             order.UserName = HttpContext.Session.GetString("Username");
-            order.FirstName = user.FirstName;
-            order.LastName = user.LastName;
-            order.Address = user.Address;
-            order.City = user.City;
-            order.State = user.State;
-            order.Country = user.Country;
-            order.Phone = user.Phone;
-            order.Email = user.Email;
+            order.FirstName = FirstName;
+            order.LastName = LastName;
+            order.Address = Address;
+            order.City = City;
+            order.State = State;
+            order.Country = Country;
+            order.Phone = Phone;
+            order.Email = Email;
             total = HttpContext.Session.GetString("Total");
             order.Total = Decimal.Parse(total);
             CreateOrder(order, orderDetailDTOs);
@@ -100,6 +98,7 @@ namespace SE1611_Group1_A3.Pages.Shopping
             }
             // Empty the shopping cart
             EmptyCart();
+            HttpContext.Session.SetInt32("Count", 0);
             // Return the OrderId as the confirmation number
             return orderID;
         }
