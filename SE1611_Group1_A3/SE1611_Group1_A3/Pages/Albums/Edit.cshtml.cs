@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SE1611_Group1_A3.FileUploadService;
 using SE1611_Group1_A3.Models;
 
 namespace SE1611_Group1_A3.Pages.Albums
@@ -13,10 +14,14 @@ namespace SE1611_Group1_A3.Pages.Albums
     public class EditModel : PageModel
     {
         private readonly SE1611_Group1_A3.Models.MusicStoreContext _context;
-
-        public EditModel(SE1611_Group1_A3.Models.MusicStoreContext context)
+        private readonly ILogger<IndexModel> _logger;
+        public readonly IFileUploadService fileUploadService;
+        public string filePath;
+        public EditModel(SE1611_Group1_A3.Models.MusicStoreContext context, ILogger<IndexModel> logger, IFileUploadService fileUploadService)
         {
             _context = context;
+            _logger = logger;
+            this.fileUploadService = fileUploadService;
         }
 
         [BindProperty]
@@ -35,17 +40,25 @@ namespace SE1611_Group1_A3.Pages.Albums
                 return NotFound();
             }
             Album = album;
-           ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "ArtistId");
-           ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "GenreId");
+           ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name");
+           ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name");
             return Page();
         }
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync(Album album)
+        public async Task<IActionResult> OnPostAsync(Album album, IFormFile file)
         {
             _context.Attach(album).State = EntityState.Modified;
-
+            if (file == null)
+            {
+                return RedirectToPage("./Create");
+            }
+            else
+            {
+                filePath = await fileUploadService.UploadFileAsync(file);
+                album.AlbumUrl = filePath.Substring(filePath.IndexOf(@"\images")).Replace(@"\", "/");
+            }
             try
             {
                 _context.Albums.Update(album);

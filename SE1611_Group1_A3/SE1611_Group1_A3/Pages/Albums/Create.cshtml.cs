@@ -17,7 +17,6 @@ namespace SE1611_Group1_A3.Pages.Albums
     {
         private readonly SE1611_Group1_A3.Models.MusicStoreContext _context;
         private readonly ILogger<IndexModel> _logger;
-        [System.ComponentModel.DataAnnotations.Required]
         public readonly IFileUploadService fileUploadService;
         public string filePath;
         public CreateModel(SE1611_Group1_A3.Models.MusicStoreContext context,ILogger<IndexModel> logger,IFileUploadService fileUploadService)
