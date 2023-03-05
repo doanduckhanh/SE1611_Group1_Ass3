@@ -33,6 +33,10 @@ namespace SE1611_Group1_A3.Pages.Albums
             {
                 Response.Redirect("/Shopping/Login");
             }
+            else if (HttpContext.Session.GetInt32("UserId") != null && HttpContext.Session.GetInt32("Role") != 1)
+            {
+                Response.Redirect("/Shopping/401");
+            }
             ViewData["Role"] = HttpContext.Session.GetInt32("Role");
             ViewData["Username"] = HttpContext.Session.GetString("Username");
 

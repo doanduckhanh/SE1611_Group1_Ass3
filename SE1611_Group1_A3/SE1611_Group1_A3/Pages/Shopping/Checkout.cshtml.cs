@@ -29,7 +29,7 @@ namespace SE1611_Group1_A3.Pages.Shopping
         public string? Email { get; set; }
         string total { get; set; }
         public void OnGet()
-        {
+        {   
             ViewData["Role"] = HttpContext.Session.GetInt32("Role");
             ViewData["Username"] = HttpContext.Session.GetString("Username");
             int id = (int)HttpContext.Session.GetInt32("UserId");

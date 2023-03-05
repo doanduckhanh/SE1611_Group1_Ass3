@@ -22,9 +22,12 @@ namespace SE1611_Group1_A3.Pages.Albums
 
         public IActionResult OnGet()
         {
-            if (HttpContext.Session.GetInt32("UserId") == null)
+            if (HttpContext.Session.GetInt32("UserId") == null )
             {
                 Response.Redirect("/Shopping/Login");
+            }else if (HttpContext.Session.GetInt32("UserId") != null && HttpContext.Session.GetInt32("Role") != 1)
+            {
+                Response.Redirect("/Shopping/401");
             }
             ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name");
             ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name");
