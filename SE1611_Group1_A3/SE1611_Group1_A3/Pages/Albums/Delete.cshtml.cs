@@ -52,6 +52,11 @@ namespace SE1611_Group1_A3.Pages.Albums
             if (album != null)
             {
                 Album = album;
+                
+                var carts = _context.Carts.Where(x => x.AlbumId == Album.AlbumId);
+                _context.Carts.RemoveRange(carts);
+                var orderDetails = _context.OrderDetails.Where(x=>x.AlbumId== Album.AlbumId);
+                _context.OrderDetails.RemoveRange(orderDetails);
                 _context.Albums.Remove(Album);
                 await _context.SaveChangesAsync();
             }
