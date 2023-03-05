@@ -79,7 +79,7 @@ namespace SE1611_Group1_A3.Shopping
                 OrderDetailDTO orderDetailDTO = new OrderDetailDTO();
                 orderDetailDTO.AlbumId = cart.AlbumId;
                 orderDetailDTO.Quantity = cart.Count;
-                orderDetailDTO.UnitPrice = Decimal.Parse("8.99");
+                orderDetailDTO.UnitPrice = (from album in _context.Albums where album.AlbumId == cart.AlbumId select album.Price).Sum();
                 orderDetailDTOs.Add(orderDetailDTO);
             }
             HttpContext.Session.SetString("OrderDetailList", JsonSerializer.Serialize(orderDetailDTOs));
