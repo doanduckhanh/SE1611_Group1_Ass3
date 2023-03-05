@@ -14,10 +14,11 @@
         <form method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Album.AlbumId" />
+            <input type="hidden" asp-for="Album.AlbumUrl" />
             <div style="width:250px"><img class=" w-100" src="@Model.Album.AlbumUrl"</div>
             <div class="form-group">
                 <label asp-for="Album.AlbumUrl" class="control-label"></label>
-                <input type="file" name="file" placeholder="Must choose a file" required asp-for="Album.AlbumUrl" class="form-control" />
+                <input accept="image/png, image/gif, image/jpeg" type="file" name="file" placeholder="Must choose a file"  asp-for="Album.AlbumUrl" class="form-control" />
                 <span asp-validation-for="Album.AlbumUrl" class="text-danger"></span>
             </div>
             <div class="form-group">
