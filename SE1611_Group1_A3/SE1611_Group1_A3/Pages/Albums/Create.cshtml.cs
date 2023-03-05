@@ -28,7 +28,9 @@ namespace SE1611_Group1_A3.Pages.Albums
 
         public IActionResult OnGet()
         {
-        ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name");
+            ViewData["Role"] = HttpContext.Session.GetInt32("Role");
+            ViewData["Username"] = HttpContext.Session.GetString("Username");
+            ViewData["ArtistId"] = new SelectList(_context.Artists, "ArtistId", "Name");
         ViewData["GenreId"] = new SelectList(_context.Genres, "GenreId", "Name");
             return Page();
         }
