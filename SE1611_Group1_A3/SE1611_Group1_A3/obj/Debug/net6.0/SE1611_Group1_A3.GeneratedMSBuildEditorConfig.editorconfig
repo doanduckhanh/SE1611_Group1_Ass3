@@ -5,100 +5,85 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SE1611_Group1_A3
 build_property.RootNamespace = SE1611_Group1_A3
-build_property.ProjectDir = D:\FU Learning\Spring2023\PRN221\Assignments\SE1611_Group1_A3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\
+build_property.ProjectDir = E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\FU Learning\Spring2023\PRN221\Assignments\SE1611_Group1_A3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3
+build_property.MSBuildProjectDirectory = E:\Spring_2023\PRN221\as3\SE1611_Group1_Ass3\SE1611_Group1_A3\SE1611_Group1_A3
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Create.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Delete.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Details.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Edit.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Index.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Albums/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Error.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Genres/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Genres/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Genres/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Genres/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Genres/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VucmVzXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Index.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Privacy.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Cart.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/401.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcNDAxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Checkout.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Index.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Login.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Logout.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shopping/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdcTG9nb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/_ViewImports.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/_ViewStart.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FU Learning/Spring2023/PRN221/Assignments/SE1611_Group1_A3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shared/_Layout.cshtml]
+[E:/Spring_2023/PRN221/as3/SE1611_Group1_Ass3/SE1611_Group1_A3/SE1611_Group1_A3/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qg8u8hokgz

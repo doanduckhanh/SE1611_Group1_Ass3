@@ -11,15 +11,15 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form method="post" enctype="multipart/form-data">
+        <form id="myForm" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Album.GenreId" class="control-label"></label>
-                <select asp-for="Album.GenreId" class ="form-control" asp-items="ViewBag.GenreId"></select>
+                <select asp-for="Album.GenreId" class="form-control" asp-items="ViewBag.GenreId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Album.ArtistId" class="control-label"></label>
-                <select asp-for="Album.ArtistId" class ="form-control" asp-items="ViewBag.ArtistId"></select>
+                <select asp-for="Album.ArtistId" class="form-control" asp-items="ViewBag.ArtistId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Album.Title" class="control-label"></label>
@@ -34,14 +34,10 @@
             <div class="form-group">
                 <label asp-for="Album.AlbumUrl" class="control-label"></label>
                 <input accept="image/png, image/gif, image/jpeg" type="file" name="file" required asp-for="Album.AlbumUrl" class="form-control" />
-                <span asp-validation-for="Album.AlbumUrl" class="text-danger" ></span>
-            </div>
-            @*<div class="form-group">
-                <label asp-for="Album.AlbumUrl" class="control-label"></label>
-                <input asp-for="Album.AlbumUrl" class="form-control" />
                 <span asp-validation-for="Album.AlbumUrl" class="text-danger"></span>
-            </div>*@
-            <div class="form-group">
+                <span id="file-error" class="text-danger" style="display:none">Please select a file.</span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -51,7 +47,21 @@
 <div>
     <a asp-page="Index">Back to List</a>
 </div>
-
+<script type="text/javascript">
+    
+    $(document).ready(function () {
+        $('#myForm').submit(function (event) {
+            var fileInput = $('input[type="file"]');
+            if (fileInput.val() == '') {
+                $('#file-error').show();
+                event.preventDefault();
+            } else {
+                $('#file-error').hide();
+            }
+        });
+    });
+</script>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
 }

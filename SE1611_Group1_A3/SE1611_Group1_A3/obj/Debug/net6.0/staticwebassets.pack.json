@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "E:\\Spring_2023\\PRN221\\as3\\SE1611_Group1_Ass3\\SE1611_Group1_A3\\SE1611_Group1_A3\\wwwroot\\images\\401.png",
+      "PackagePath": "staticwebassets\\images\\401.png"
+    },
+    {
       "Id": "E:\\Spring_2023\\PRN221\\as3\\SE1611_Group1_Ass3\\SE1611_Group1_A3\\SE1611_Group1_A3\\wwwroot\\images\\placeholder.gif",
       "PackagePath": "staticwebassets\\images\\placeholder.gif"
+    },
+    {
+      "Id": "E:\\Spring_2023\\PRN221\\as3\\SE1611_Group1_Ass3\\SE1611_Group1_A3\\SE1611_Group1_A3\\wwwroot\\images\\yasuo.png",
+      "PackagePath": "staticwebassets\\images\\yasuo.png"
     },
     {
       "Id": "E:\\Spring_2023\\PRN221\\as3\\SE1611_Group1_Ass3\\SE1611_Group1_A3\\SE1611_Group1_A3\\wwwroot\\js\\site.js",
